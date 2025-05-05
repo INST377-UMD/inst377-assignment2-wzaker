@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Class Activities - Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="dogs.html">Dogs</a></li>
+          </ul>
+        </nav>
+      
+        <main>
+          <h1>Welcome to Class Activities</h1>
+          <div class="button-container">
+            <button class="custom-btn" onclick="location.href='stocks.html'"role="button">Stocks</button>
+            <button class="custom-btn" onclick="location.href='dogs.html'"role="button">Dogs</button>
+          </div>
+      
+          <div id="quote-box">
+            <h3>Quote of the Moment</h3>
+            <p id="quote">Loading...</p>
+          </div>
+        </main>
+      
+        <div class="audio-controls">
+          <h3>In this web page there are options to Navigate using Audio!</h3>
+          <ul>
+            <li>Navigate to a Different Page
+              <ul>
+                <li>Say: <strong>Navigate to &lt;page&gt;</strong></li>
+              </ul>
+            </li>
+            <li>Change the Page Color
+              <ul>
+                <li>Say: <strong>Change the color to &lt;color&gt;</strong></li>
+              </ul>
+            </li>
+            <li>Say Hello Back to you!
+              <ul>
+                <li>Say: <strong>Hello</strong></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="audio-btn" onclick="annyang.start()">Turn On Listening</button>
+          <button class="audio-btn" onclick="annyang.abort()">Turn Off Listening</button>
+        </div>
+        
+      
+        <script src="script.js"></script>
+</html>

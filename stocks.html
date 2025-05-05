@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Stocks</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="dogs.html">Dogs</a></li>
+          </ul>
+        </nav>
+      
+        <h1>Stock Lookup</h1>
+
+        <!-- FORM SECTION -->
+        <div class="lookup-form">
+          <input type="text" id="tickerInput" maxlength="5" required placeholder="Enter stock ticker (e.g. AAPL)">
+          <select id="dayRange">
+            <option value="30">30 Days</option>
+            <option value="60">60 Days</option>
+            <option value="90">90 Days</option>
+          </select>
+          <button class="button-24" onclick="fetchStock()" role="button">Lookup</button>
+        </div>
+      
+        <!-- CHART -->
+        <canvas id="stockChart" width="600" height="300"></canvas>
+      
+        <!-- REDDIT STOCKS -->
+        <h2>Top 5 Reddit Stocks</h2>
+        <table id="redditTable">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Comments</th>
+              <th>Sentiment</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      
+        <div class="audio-controls">
+          <h3>In this web page there are options to Navigate using Audio!</h3>
+          <ul>
+            <li>Lookup stocks
+              <ul>
+                <li>Say: <strong>Lookup &lt;stocks&gt;</strong></li>
+              </ul>
+            </li>
+            <li>Navigate to a Different Page
+              <ul>
+                <li>Say: <strong>Navigate to &lt;page&gt;</strong></li>
+              </ul>
+            </li>
+            <li>Change the Page Color
+              <ul>
+                <li>Say: <strong>Change the color to &lt;color&gt;</strong></li>
+              </ul>
+            </li>
+            <li>Say Hello Back to you!
+              <ul>
+                <li>Say: <strong>Hello</strong></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="audio-btn" onclick="annyang.start()">Turn On Listening</button>
+          <button class="audio-btn" onclick="annyang.abort()">Turn Off Listening</button>
+        </div>
+      
+        <script src="stocks.js"></script>
+        
+</html>

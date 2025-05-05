@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Dogs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-slider@1.0.2/dist/simple-slider.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stocks.html">Stocks</a></li>
+        <li><a href="dogs.html">Dogs</a></li>
+      </ul>
+    </nav>
+
+    <h1>Dog Carousel & Breeds</h1>
+
+    <div class="slider-wrapper">
+      <button class="slider-arrow left" onclick="slider.prev()">
+        &#10094;
+      </button>
+      <div class="slider-container" id="dogCarousel"></div>
+      <button class="slider-arrow right" onclick="slider.next()">
+        &#10095;
+      </button>
+    </div>
+
+    <div id="breedButtons"></div>
+
+    <div id="breedInfo" class="breed-info" style="display: none"></div>
+
+    <div class="audio-controls">
+      <h3>In this web page there are options to Navigate using Audio!</h3>
+      <ul>
+        <li>
+          Load Dog Breed
+          <ul>
+            <li>Say: <strong>Load Dog Breed &lt;Dog Breed Name&gt;</strong></li>
+          </ul>
+        </li>
+        <li>
+          Navigate to a Different Page
+          <ul>
+            <li>Say: <strong>Navigate to &lt;page&gt;</strong></li>
+          </ul>
+        </li>
+        <li>
+          Change the Page Color
+          <ul>
+            <li>Say: <strong>Change the color to &lt;color&gt;</strong></li>
+          </ul>
+        </li>
+        <li>
+          Say Hello Back to you!
+          <ul>
+            <li>Say: <strong>Hello</strong></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="audio-btn" onclick="annyang.start()">
+        Turn On Listening
+      </button>
+      <button class="audio-btn" onclick="annyang.abort()">
+        Turn Off Listening
+      </button>
+    </div>
+
+    <script src="dogs.js"></script>
+  </body>
+</html>
